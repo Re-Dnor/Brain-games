@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/Re-Dnor/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Re-Dnor/frontend-project-lvl1/actions)
+![example workflow](https://github.com/Re-Dnor/frontend-project-lvl1/blob/main/.github/workflows/github-actions-demo.yml)
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-![example workflow](https://github.com/Re-Dnor/Re-Dnor/actions/workflows/Re-Dnor/badge.svg)
