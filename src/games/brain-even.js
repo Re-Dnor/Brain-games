@@ -8,6 +8,7 @@ export default function brainEven() {
   console.log(`Hello ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
+  let result = `Congratulations ${name}!!!`
   for (let i = 0; i < 3;) {
     const random = getRandomNumber();
     const answer = readlineSync.question(`Question: ${random}? `)
@@ -18,10 +19,17 @@ export default function brainEven() {
     } else if (random % 2 !== 0 && answer === 'no') {
       i++;
       console.log("Correct!")
+    } else if (random % 2 === 0 && answer === 'no') {
+      result = `'no' is wrong answer ;(. Correct answer was 'yes'.`
+      break;
+    } else if (random % 2 !== 0 && answer === 'yes') {
+      result = `'yes' is wrong answer ;(. Correct answer was 'no'.`
+      break;
     } else {
-      i = 0;
-      console.log('Nope')
+      result = `Your answer: ${answer} not correct!`;
+      break;
     }
   }
-  console.log(`Congratulations ${name}!!!`);
+  console.log(result);
+
 }
