@@ -1,35 +1,16 @@
-#!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import getRandomNumber from '../getRandom.js';
+import getRandomNumber from '../logic/getRandomNumber.js';
+import general from '../index.js';
 
-export default function brainEven() {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${name}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  let result = `Congratulations ${name}!!!`
-  for (let i = 0; i < 3;) {
-    const random = getRandomNumber();
-    const answer = readlineSync.question(`Question: ${random}? `)
+const isEven = (num) => num % 2 === 0;
 
-    if (random % 2 === 0 && answer === 'yes') {
-      i++;
-      console.log("Correct!")
-    } else if (random % 2 !== 0 && answer === 'no') {
-      i++;
-      console.log("Correct!")
-    } else if (random % 2 === 0 && answer === 'no') {
-      result = `'no' is wrong answer ;(. Correct answer was 'yes'.`
-      break;
-    } else if (random % 2 !== 0 && answer === 'yes') {
-      result = `'yes' is wrong answer ;(. Correct answer was 'no'.`
-      break;
-    } else {
-      result = `Your answer: ${answer} not correct!`;
-      break;
-    }
-  }
-  console.log(result);
-
+function correctAnswer() {
+  const randomNum = getRandomNumber(0, 100);
+  const question = `${randomNum}`;
+  const correctionAnswer = isEven(randomNum) ? 'yes' : 'no';
+  return [question, correctionAnswer];
 }
+
+const startGame = () => general(rule, correctAnswer);
+export default startGame;
