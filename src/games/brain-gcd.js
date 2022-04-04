@@ -29,7 +29,7 @@ const calculator = (randomNum1, randomNum2) => {
 function correctAnswer() {
   const randomNum1 = getRandomNumber(0, 51);
   const randomNum2 = getRandomNumber(0, 51);
-  const question = `${randomNum1}  ${randomNum2}`;
+  const question = `${randomNum1} ${randomNum2}`;
   const correctionAnswer = calculator(randomNum1, randomNum2);
   return [question, correctionAnswer];
 }
