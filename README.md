@@ -17,8 +17,6 @@
 Затем происталировать проект: <code> make install </code><br>
 После использовать команду: <code> make publish</code>, <code> npm link</code>
 
-[![asciicast](https://asciinema.org/a/LVwjwvQfnGdd2JVf07372bBE8.svg)](https://asciinema.org/a/LVwjwvQfnGdd2JVf07372bBE8)
-
 ## Команды для запуска игр
 
 - Калькулятор. <code> brain-calc </code><br>
